@@ -3,16 +3,19 @@ export default {
   head: {
     title: 'nuxt-learning',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'pt-br'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Minha descrição...' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script:[
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/solid.min.js' }
     ]
   },
 
