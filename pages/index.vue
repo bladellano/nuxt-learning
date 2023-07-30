@@ -1,6 +1,9 @@
 <template>
   <!-- <Tutorial/> -->
   <div>
+
+    <button class="bg-gray-100" v-tooltip="'You have ' + count + ' new messages.'">Click here</button>
+
     <pre>
       {{ user }}
     </pre>
@@ -16,6 +19,10 @@ export default {
     ...mapState({
       user: (state) => state.user,
     }),
+  },
+  mounted() {
+    console.log(this.$toUpperCase("Jon Snow"));
+    console.log(this.$dayjs().format());
   },
 };
 </script>
