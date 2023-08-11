@@ -2,8 +2,11 @@
   <!-- <Tutorial/> -->
   <div>
 
-    <button class="bg-gray-100" v-tooltip="'You have ' + count + ' new messages.'">Click here</button>
+    <button class="bg-gray-100" v-tooltip="'You have new messages.'">Click here</button>
+    <pre>
 
+      {{ $config }}
+    </pre>
     <pre>
       {{ user }}
     </pre>
@@ -19,6 +22,12 @@ export default {
     ...mapState({
       user: (state) => state.user,
     }),
+  },
+  asyncData({$config}) {
+    console.log($config)
+  },
+  created(){
+    console.log(this.$config.youtube_api_key)
   },
   mounted() {
     console.log(this.$toUpperCase("Jon Snow"));
